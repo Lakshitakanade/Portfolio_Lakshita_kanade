@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Lakshita Kande – B.Tech CSE Student, Frontend Developer & UI/UX Designer based in India." />
+  <meta name="keywords" content="Lakshita Kande, Frontend Developer, UI/UX Designer, CSE, Portfolio" />
+  <title>Lakshita Kande | Frontend Developer & UI/UX Designer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ===== LOADING SCREEN ===== -->
+  <div id="loader">
+    <div class="loader-inner">
+      <div class="loader-logo">Lakshita</div>
+      <div class="loader-bar"><div class="loader-fill"></div></div>
+      <p class="loader-text">Crafting experience…</p>
+    </div>
+  </div>
+
+  <!-- ===== CURSOR ===== -->
+  <div id="cursor"></div>
+  <div id="cursor-follower"></div>
+
+  <!-- ===== SCROLL PROGRESS ===== -->
+  <div id="scroll-progress"></div>
+
+  <!-- ===== NAVIGATION ===== -->
+  <nav id="navbar">
+    <div class="nav-container">
+      <a href="#hero" class="nav-logo">LK<span class="dot">.</span></a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#experience" class="nav-link">Experience</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#services" class="nav-link">Services</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button id="theme-toggle" aria-label="Toggle dark/light mode">
+          <i class="fas fa-moon" id="theme-icon"></i>
+        </button>
+        <a href="#contact" class="btn-hire">Hire Me</a>
+        <button class="hamburger" id="hamburger" aria-label="Open menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ===== HERO SECTION ===== -->
+  <section id="hero">
+    <canvas id="particle-canvas"></canvas>
+    <div class="hero-glow glow-1"></div>
+    <div class="hero-glow glow-2"></div>
+    <div class="hero-glow glow-3"></div>
+
+    <div class="hero-content">
+      <div class="hero-text" data-aos="fade-right">
+        <p class="hero-eyebrow"><span class="dot-pulse"></span> Available for Internships</p>
+        <h1 class="hero-name">Lakshita<br /><span class="gradient-text">Kanade</span></h1>
+        <p class="hero-subtitle">
+          <span id="typed-text"></span><span class="type-cursor">|</span>
+        </p>
+        <p class="hero-desc">
+          Turning ideas into elegant digital experiences — where clean code meets thoughtful design.
+        </p>
+        <div class="hero-cta">
+          <a href="#projects" class="btn-primary magnetic">
+            <span>View Projects</span>
+            <i class="fas fa-arrow-right"></i>
+          </a>
+          <a href="#contact" class="btn-outline magnetic">
+            <span>Contact Me</span>
+          </a>
+        </div>
+        <div class="hero-badges">
+          <span class="badge">Frontend Dev</span>
+          <span class="badge">UI/UX Design</span>
+          <span class="badge">2 Internships</span>
+        </div>
+      </div>
+
+      <div class="hero-visual" data-aos="fade-left">
+        <div class="profile-ring">
+          <div class="profile-card">
+            <div class="profile-avatar">
+              <div class="avatar-placeholder">
+                <i class="fas fa-user"></i>
+                <p>Lakshita kanade</p>
+              </div>
+              <div class="avatar-status"><i class="fas fa-circle"></i> Available</div>
+            </div>
+          </div>
+          <div class="orbit orbit-1">
+            <div class="orbit-dot" style="--i:0"><i class="fab fa-html5"></i></div>
+            <div class="orbit-dot" style="--i:1"><i class="fab fa-css3-alt"></i></div>
+            <div class="orbit-dot" style="--i:2"><i class="fab fa-js"></i></div>
+            <div class="orbit-dot" style="--i:3"><i class="fab fa-python"></i></div>
+          </div>
+          <div class="orbit orbit-2">
+            <div class="orbit-dot small" style="--i:0"><i class="fab fa-figma"></i></div>
+            <div class="orbit-dot small" style="--i:1"><i class="fas fa-code"></i></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-scroll-hint">
+      <div class="scroll-line"></div>
+      <span>Scroll</span>
+    </div>
+  </section>
+
+  <!-- ===== ABOUT SECTION ===== -->
+  <section id="about" class="section">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-tag">Who I Am</span>
+        <h2 class="section-title">About <span class="gradient-text">Me</span></h2>
+      </div>
+
+      <div class="about-grid">
+        <div class="about-image-col" data-aos="fade-right">
+          <div class="about-image-wrap">
+            <div class="about-img-placeholder">
+              <i class="fas fa-user-circle"></i>
+              <p>Lakshita Kanade</p>
+            </div>
+            <div class="about-tag tag-1"><i class="fas fa-graduation-cap"></i> 2nd Year CSE</div>
+            <div class="about-tag tag-2"><i class="fas fa-map-marker-alt"></i> India</div>
+          </div>
+        </div>
+
+        <div class="about-text-col" data-aos="fade-left">
+          <h3>Passionate Developer & Designer</h3>
+          <p>
+            I'm a second-year Computer Science Engineering student with a love for crafting digital products that are both technically sound and visually compelling. I believe the best products live at the intersection of elegant code and thoughtful design.
+          </p>
+          <p>
+            With hands-on experience from <strong>2 internships</strong>, I've worked on real-world projects across frontend development and UI/UX design. I'm always learning, always building, and always pushing my craft forward.
+          </p>
+
+          <div class="about-details">
+            <div class="detail-row"><span class="detail-label">Degree</span><span class="detail-value">B.Tech in Computer Science Engineering</span></div>
+            <div class="detail-row"><span class="detail-label">Year</span><span class="detail-value">2nd Year (2025–2029)</span></div>
+            <div class="detail-row"><span class="detail-label">Focus</span><span class="detail-value">Frontend Dev · UI/UX Design · C++/Python</span></div>
+            <div class="detail-row"><span class="detail-label">Location</span><span class="detail-value">India</span></div>
+          </div>
+
+          <a href="#contact" class="btn-primary magnetic" style="margin-top:1.5rem;display:inline-flex;">
+            <span>Let's Connect</span><i class="fas fa-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Counters -->
+      <div class="counters-row" data-aos="fade-up">
+        <div class="counter-card">
+          <div class="counter-icon"><i class="fas fa-briefcase"></i></div>
+          <div class="counter-num" data-target="2">0</div>
+          <div class="counter-plus">+</div>
+          <p>Internships</p>
+        </div>
+        <div class="counter-card">
+          <div class="counter-icon"><i class="fas fa-folder-open"></i></div>
+          <div class="counter-num" data-target="6">0</div>
+          <div class="counter-plus">+</div>
+          <p>Projects Built</p>
+        </div>
+        <div class="counter-card">
+          <div class="counter-icon"><i class="fas fa-code"></i></div>
+          <div class="counter-num" data-target="3">0</div>
+          <div class="counter-plus"></div>
+          <p>Dev Skills</p>
+        </div>
+        <div class="counter-card">
+          <div class="counter-icon"><i class="fas fa-pencil-ruler"></i></div>
+          <div class="counter-num" data-target="3">0</div>
+          <div class="counter-plus"></div>
+          <p>Design Tools</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SKILLS SECTION ===== -->
+  <section id="skills" class="section section-dark">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-tag">What I Know</span>
+        <h2 class="section-title">My <span class="gradient-text">Skills</span></h2>
+      </div>
+
+      <div class="skills-grid">
+        <!-- Frontend -->
+        <div class="skill-category" data-aos="fade-up" data-aos-delay="100">
+          <div class="skill-cat-header">
+            <i class="fas fa-laptop-code"></i>
+            <h3>Frontend Development</h3>
+          </div>
+          <div class="skill-items">
+            <div class="skill-item">
+              <div class="skill-info"><i class="fab fa-html5 html"></i><span>HTML5</span><span class="skill-pct">90%</span></div>
+              <div class="skill-bar"><div class="skill-fill" data-width="90"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info"><i class="fab fa-css3-alt css"></i><span>CSS3</span><span class="skill-pct">85%</span></div>
+              <div class="skill-bar"><div class="skill-fill" data-width="85"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info"><i class="fab fa-js js"></i><span>JavaScript</span><span class="skill-pct">45%</span></div>
+              <div class="skill-bar"><div class="skill-fill" data-width="65"></div></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Programming -->
+        <div class="skill-category" data-aos="fade-up" data-aos-delay="200">
+          <div class="skill-cat-header">
+            <i class="fas fa-terminal"></i>
+            <h3>Programming</h3>
+          </div>
+          <div class="skill-items">
+            <div class="skill-item">
+              <div class="skill-info"><i class="fas fa-copyright c-lang"></i><span>C</span><span class="skill-pct">80%</span></div>
+              <div class="skill-bar"><div class="skill-fill" data-width="80"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info"><i class="fas fa-code cpp"></i><span>C++</span><span class="skill-pct">75%</span></div>
+              <div class="skill-bar"><div class="skill-fill" data-width="75"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info"><i class="fab fa-python py"></i><span>Python</span><span class="skill-pct">60%</span></div>
+              <div class="skill-bar"><div class="skill-fill" data-width="60"></div></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Design -->
+        <div class="skill-category" data-aos="fade-up" data-aos-delay="300">
+          <div class="skill-cat-header">
+            <i class="fas fa-palette"></i>
+            <h3>Design</h3>
+          </div>
+          <div class="skill-items">
+            <div class="skill-item">
+              <div class="skill-info"><i class="fab fa-figma figma"></i><span>Figma</span><span class="skill-pct">80%</span></div>
+              <div class="skill-bar"><div class="skill-fill" data-width="80"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info"><i class="fas fa-layer-group ui"></i><span>UI Design</span><span class="skill-pct">78%</span></div>
+              <div class="skill-bar"><div class="skill-fill" data-width="78"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info"><i class="fas fa-users ux"></i><span>UX Design</span><span class="skill-pct">72%</span></div>
+              <div class="skill-bar"><div class="skill-fill" data-width="72"></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Floating tech badges -->
+      <div class="tech-badges" data-aos="fade-up">
+        <span class="tech-badge">Problem Solving</span>
+        <span class="tech-badge">Responsive Design</span>
+        <span class="tech-badge">Git / GitHub</span>
+        <span class="tech-badge">Wireframing</span>
+        <span class="tech-badge">Prototyping</span>
+        <span class="tech-badge">Data Structures</span>
+        <span class="tech-badge">OOP</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== EXPERIENCE SECTION ===== -->
+  <section id="experience" class="section">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-tag">Work History</span>
+        <h2 class="section-title">My <span class="gradient-text">Experience</span></h2>
+      </div>
+
+      <div class="timeline">
+        <div class="timeline-item" data-aos="fade-right">
+          <div class="timeline-marker">
+            <i class="fas fa-briefcase"></i>
+          </div>
+          <div class="timeline-card glass-card">
+            <div class="tl-meta">
+              <span class="tl-tag">Internship 1</span>
+              <span class="tl-date"><i class="fas fa-calendar"></i> Duration: 1Month</span>
+            </div>
+            <h3 class="tl-role">Frontend Development Intern</h3>
+            <p class="tl-company"><i class="fas fa-building"></i> ShadowFox</p>
+            <ul class="tl-duties">
+              <li>Developed and maintained responsive web interfaces using HTML, CSS, and JavaScript</li>
+              <li>Collaborated with the design team to implement UI components from Figma mockups</li>
+              <li>Optimised page performance and ensured cross-browser compatibility</li>
+            </ul>
+            <div class="tl-skills">
+              <span>HTML</span><span>CSS</span><span>JavaScript</span><span>Figma</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item right" data-aos="fade-left">
+          <div class="timeline-marker">
+            <i class="fas fa-palette"></i>
+          </div>
+          <div class="timeline-card glass-card">
+            <div class="tl-meta">
+              <span class="tl-tag">Internship 2</span>
+              <span class="tl-date"><i class="fas fa-calendar"></i> Duration: 1Month</span>
+            </div>
+            <h3 class="tl-role">UI/UX Design Intern</h3>
+            <p class="tl-company"><i class="fas fa-building"></i> InAmigos</p>
+            <ul class="tl-duties">
+              <li>Designed user-centred interfaces and prototypes for web and mobile applications</li>
+              <li>Conducted user research and usability testing to iterate on designs</li>
+              <li>Created design systems and component libraries in Figma</li>
+            </ul>
+            <div class="tl-skills">
+              <span>Figma</span><span>UI Design</span><span>UX Research</span><span>Prototyping</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Education -->
+      <div class="education-card glass-card" data-aos="fade-up">
+        <div class="edu-icon"><i class="fas fa-graduation-cap"></i></div>
+        <div class="edu-info">
+          <span class="tl-tag">Education</span>
+          <h3>B.Tech – Computer Science Engineering</h3>
+          <p class="tl-company"><i class="fas fa-university"></i> Parul University  · 2025 – 2029</p>
+          <p>Studying core CS fundamentals, data structures, algorithms, and software engineering alongside design thinking and frontend development.</p>
+        </div>
+        <div class="edu-badge">2nd Year</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PROJECTS SECTION ===== -->
+  <section id="projects" class="section section-dark">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-tag">What I've Built</span>
+        <h2 class="section-title">Featured <span class="gradient-text">Projects</span></h2>
+      </div>
+
+      <!-- Filter buttons -->
+      <div class="project-filters" data-aos="fade-up">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="frontend">Frontend</button>
+        <button class="filter-btn" data-filter="design">Design</button>
+        <button class="filter-btn" data-filter="fullstack">Full Stack</button>
+      </div>
+
+      <div class="projects-grid">
+        <!-- Project 1 -->
+        <div class="project-card glass-card" data-category="frontend" data-aos="fade-up" data-aos-delay="100">
+          <div class="project-img">
+            <div class="project-img-placeholder pi-1">
+              <i class="fas fa-user-circle"></i>
+            </div>
+            <div class="project-overlay">
+              <a href="#" class="btn-icon" aria-label="Live Demo"><i class="fas fa-external-link-alt"></i></a>
+              <a href="#" class="btn-icon" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            </div>
+          </div>
+          <div class="project-body">
+            <span class="project-cat">Frontend</span>
+            <h3>Portfolio Website</h3>
+            <p>A modern, animated personal portfolio with glassmorphism design, smooth scroll, and interactive elements.</p>
+            <div class="project-tech">
+              <span>HTML</span><span>CSS</span><span>JavaScript</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="project-card glass-card" data-category="fullstack" data-aos="fade-up" data-aos-delay="150">
+          <div class="project-img">
+            <div class="project-img-placeholder pi-2">
+              <i class="fas fa-graduation-cap"></i>
+            </div>
+            <div class="project-overlay">
+              <a href="#" class="btn-icon" aria-label="Live Demo"><i class="fas fa-external-link-alt"></i></a>
+              <a href="#" class="btn-icon" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            </div>
+          </div>
+          <div class="project-body">
+            <span class="project-cat">Full Stack</span>
+            <h3>E-Learning Platform</h3>
+            <p>An interactive learning platform featuring course listings, video modules, quizzes, and progress tracking.</p>
+            <div class="project-tech">
+              <span>HTML</span><span>CSS</span><span>JavaScript</span><span>Python</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="project-card glass-card" data-category="fullstack" data-aos="fade-up" data-aos-delay="200">
+          <div class="project-img">
+            <div class="project-img-placeholder pi-3">
+              <i class="fas fa-users-cog"></i>
+            </div>
+            <div class="project-overlay">
+              <a href="#" class="btn-icon" aria-label="Live Demo"><i class="fas fa-external-link-alt"></i></a>
+              <a href="#" class="btn-icon" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            </div>
+          </div>
+          <div class="project-body">
+            <span class="project-cat">Full Stack</span>
+            <h3>Student Management System</h3>
+            <p>A comprehensive system to manage student records, attendance, grades, and departmental data.</p>
+            <div class="project-tech">
+              <span>C++</span><span>Python</span><span>HTML</span><span>CSS</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 4 -->
+        <div class="project-card glass-card" data-category="design" data-aos="fade-up" data-aos-delay="100">
+          <div class="project-img">
+            <div class="project-img-placeholder pi-4">
+              <i class="fab fa-figma"></i>
+            </div>
+            <div class="project-overlay">
+              <a href="#" class="btn-icon" aria-label="View Case Study"><i class="fas fa-external-link-alt"></i></a>
+              <a href="#" class="btn-icon" aria-label="Figma"><i class="fab fa-figma"></i></a>
+            </div>
+          </div>
+          <div class="project-body">
+            <span class="project-cat">UI/UX</span>
+            <h3>UI/UX Case Study</h3>
+            <p>End-to-end UX research, wireframing, and high-fidelity prototyping for a mobile-first application.</p>
+            <div class="project-tech">
+              <span>Figma</span><span>UX Research</span><span>Prototyping</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 5 -->
+        <div class="project-card glass-card" data-category="frontend" data-aos="fade-up" data-aos-delay="150">
+          <div class="project-img">
+            <div class="project-img-placeholder pi-5">
+              <i class="fas fa-calculator"></i>
+            </div>
+            <div class="project-overlay">
+              <a href="#" class="btn-icon" aria-label="Live Demo"><i class="fas fa-external-link-alt"></i></a>
+              <a href="#" class="btn-icon" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            </div>
+          </div>
+          <div class="project-body">
+            <span class="project-cat">Frontend</span>
+            <h3>Calculator App</h3>
+            <p>A sleek, fully functional calculator with keyboard support, history log, and smooth micro-animations.</p>
+            <div class="project-tech">
+              <span>HTML</span><span>CSS</span><span>JavaScript</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 6 -->
+        <div class="project-card glass-card" data-category="design" data-aos="fade-up" data-aos-delay="200">
+          <div class="project-img">
+            <div class="project-img-placeholder pi-6">
+              <i class="fas fa-paint-brush"></i>
+            </div>
+            <div class="project-overlay">
+              <a href="#" class="btn-icon" aria-label="Live Demo"><i class="fas fa-external-link-alt"></i></a>
+              <a href="#" class="btn-icon" aria-label="Figma"><i class="fab fa-figma"></i></a>
+            </div>
+          </div>
+          <div class="project-body">
+            <span class="project-cat">Design</span>
+            <h3>Landing Page Design</h3>
+            <p>A high-converting SaaS landing page design with motion principles, brand hierarchy, and CTA optimisation.</p>
+            <div class="project-tech">
+              <span>Figma</span><span>UI Design</span><span>CSS</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SERVICES SECTION ===== -->
+  <section id="services" class="section">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-tag">What I Offer</span>
+        <h2 class="section-title">My <span class="gradient-text">Services</span></h2>
+      </div>
+
+      <div class="services-grid">
+        <div class="service-card glass-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="service-icon s1"><i class="fas fa-laptop-code"></i></div>
+          <h3>Frontend Development</h3>
+          <p>Building responsive, performant, and accessible web interfaces using HTML, CSS, and JavaScript with a focus on pixel-perfect execution.</p>
+          <ul class="service-list">
+            <li><i class="fas fa-check"></i> Responsive layouts</li>
+            <li><i class="fas fa-check"></i> Cross-browser support</li>
+            <li><i class="fas fa-check"></i> Performance optimisation</li>
+          </ul>
+        </div>
+
+        <div class="service-card glass-card" data-aos="fade-up" data-aos-delay="150">
+          <div class="service-icon s2"><i class="fas fa-layer-group"></i></div>
+          <h3>UI Design</h3>
+          <p>Crafting visually stunning user interfaces with strong typography, colour theory, and design systems that communicate your brand.</p>
+          <ul class="service-list">
+            <li><i class="fas fa-check"></i> Visual design</li>
+            <li><i class="fas fa-check"></i> Component libraries</li>
+            <li><i class="fas fa-check"></i> Design systems</li>
+          </ul>
+        </div>
+
+        <div class="service-card glass-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="service-icon s3"><i class="fas fa-users"></i></div>
+          <h3>UX Design</h3>
+          <p>Designing meaningful user experiences through research, wireframing, and iterative prototyping that solves real user problems.</p>
+          <ul class="service-list">
+            <li><i class="fas fa-check"></i> User research</li>
+            <li><i class="fas fa-check"></i> Wireframing</li>
+            <li><i class="fas fa-check"></i> Usability testing</li>
+          </ul>
+        </div>
+
+        <div class="service-card glass-card" data-aos="fade-up" data-aos-delay="250">
+          <div class="service-icon s4"><i class="fas fa-globe"></i></div>
+          <h3>Website Design</h3>
+          <p>End-to-end website design and development — from concept and wireframes through to a polished, live, responsive website.</p>
+          <ul class="service-list">
+            <li><i class="fas fa-check"></i> Concept to launch</li>
+            <li><i class="fas fa-check"></i> Mobile-first approach</li>
+            <li><i class="fas fa-check"></i> SEO-friendly structure</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ACHIEVEMENTS SECTION ===== -->
+  <section id="achievements" class="section section-dark">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-tag">Milestones</span>
+        <h2 class="section-title">Key <span class="gradient-text">Achievements</span></h2>
+      </div>
+
+      <div class="achievements-grid">
+        <div class="achievement-card" data-aos="zoom-in" data-aos-delay="100">
+          <div class="ach-icon"><i class="fas fa-briefcase"></i></div>
+          <h3>2 Internships Completed</h3>
+          <p>Real-world experience in both frontend development and UI/UX design at industry organisations.</p>
+        </div>
+        <div class="achievement-card" data-aos="zoom-in" data-aos-delay="150">
+          <div class="ach-icon"><i class="fas fa-rocket"></i></div>
+          <h3>Multiple Projects Built</h3>
+          <p>Independently designed and developed 6+ projects spanning web development and digital design.</p>
+        </div>
+        <div class="achievement-card" data-aos="zoom-in" data-aos-delay="200">
+          <div class="ach-icon"><i class="fas fa-brain"></i></div>
+          <h3>Continuous Learner</h3>
+          <p>Actively expanding skills in JavaScript, Python, and advanced design systems as a 2nd-year student.</p>
+        </div>
+        <div class="achievement-card" data-aos="zoom-in" data-aos-delay="250">
+          <div class="ach-icon"><i class="fas fa-puzzle-piece"></i></div>
+          <h3>Problem-Solving Enthusiast</h3>
+          <p>Passionate about algorithmic thinking with practical C and C++ problem-solving experience.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT SECTION ===== -->
+  <section id="contact" class="section">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-tag">Get In Touch</span>
+        <h2 class="section-title">Contact <span class="gradient-text">Me</span></h2>
+      </div>
+
+      <div class="contact-grid">
+        <div class="contact-info" data-aos="fade-right">
+          <h3>Let's build something together.</h3>
+          <p>Whether you have a project in mind, an internship opportunity, or just want to say hello — my inbox is open.</p>
+
+          <div class="contact-items">
+            <div class="contact-item">
+              <div class="contact-item-icon"><i class="fas fa-envelope"></i></div>
+              <div>
+                <span class="ci-label">Email</span>
+                <!-- Update with real email -->
+                <a href="mailto:lakshita@example.com" class="ci-value">lakshitakanade@gmail.com</a>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-item-icon"><i class="fas fa-map-marker-alt"></i></div>
+              <div>
+                <span class="ci-label">Location</span>
+                <span class="ci-value">India</span>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-item-icon"><i class="fab fa-linkedin"></i></div>
+              <div>
+                <span class="ci-label">LinkedIn</span>
+                <!-- Update with real LinkedIn URL -->
+                <a href="https://www.linkedin.com/in/lakshita-kanade-386a90376/" class="ci-value" target="_blank" rel="noopener">linkedin.com/in/lakshitakande</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="social-row">
+            <!-- Update each href with real profile URLs -->
+   
+            <a href="https://github.com/Lakshitakanade" target="_blank" rel="noopener" class="social-icon" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            <a href="https://www.geeksforgeeks.org/profile/lakshitag0jw" target="_blank" rel="noopener" class="social-icon" aria-label="GeeksforGeeks"><i class="fas fa-code"></i></a>
+            <a href="https://www.linkedin.com/in/lakshita-kanade-386a90376/" target="_blank" rel="noopener" class="social-icon" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="mailto:lakshitakanade@gmail.com" class="social-icon" aria-label="Email"><i class="fas fa-envelope"></i></a>
+          </div>
+        </div>
+
+        <div class="contact-form-wrap glass-card" data-aos="fade-left">
+          <form id="contact-form" novalidate>
+            <div class="form-group">
+              <label for="name">Full Name</label>
+              <input type="text" id="name" name="name" placeholder="Your name" required />
+              <span class="form-error" id="name-error"></span>
+            </div>
+            <div class="form-group">
+              <label for="email">Email Address</label>
+              <input type="email" id="email" name="email" placeholder="your@email.com" required />
+              <span class="form-error" id="email-error"></span>
+            </div>
+            <div class="form-group">
+              <label for="subject">Subject</label>
+              <input type="text" id="subject" name="subject" placeholder="What's this about?" />
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="5" placeholder="Tell me about your project…" required></textarea>
+              <span class="form-error" id="message-error"></span>
+            </div>
+            <button type="submit" class="btn-primary magnetic form-submit">
+              <span>Send Message</span>
+              <i class="fas fa-paper-plane"></i>
+            </button>
+            <p class="form-success" id="form-success">Message sent! I'll be in touch soon.</p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer id="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="#hero" class="nav-logo">LK<span class="dot">.</span></a>
+          <p>B.Tech CSE Student · Frontend Developer · UI/UX Designer</p>
+        </div>
+        <div class="footer-links">
+          <a href="#about">About</a>
+          <a href="#skills">Skills</a>
+          <a href="#projects">Projects</a>
+          <a href="#contact">Contact</a>
+        </div>
+        <div class="footer-social">
+
+          <a href="https://github.com/Lakshitakanade" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
+          <a href="https://www.geeksforgeeks.org/profile/lakshitag0jw" target="_blank" rel="noopener" aria-label="GeeksforGeeks"><i class="fas fa-code"></i></a>
+          <a href="https://www.linkedin.com/in/lakshita-kanade-386a90376/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          <a href="mailto:lakshitakanade@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 Lakshita Kande. Crafted with <i class="fas fa-heart"></i> and lots of ☕</p>
+        <p>Designed & Built by Lakshita Kande</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===== BACK TO TOP ===== -->
+  <button id="back-to-top" aria-label="Back to top"><i class="fas fa-chevron-up"></i></button>
+
+  <script src="script.js"></script>
+</body>
+</html>
